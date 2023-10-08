@@ -17,6 +17,7 @@
     gap: 1rem;
     justify-content: center;
     align-items: center;
+    align-content: space-evenly;
 }
 .products{
     border: 6px solid rgb(182, 236, 171);
