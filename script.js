@@ -49,15 +49,15 @@ for(let i=0; i<products.length; i++){
 
             //? check weather particular class element present or not
 
-            if(i==0 && cartContent.querySelector(`.first`)){
+            if(i==0){
                 let removeIt = cartContent.querySelector(`.first`);
                 cartContent.removeChild(removeIt)
             }
-            else if(i==1 && cartContent.querySelector(`.second`)){
+            else if(i==1){
                 let removeIt = cartContent.querySelector(`.second`);
                 cartContent.removeChild(removeIt)
             }
-            else if(i==2 && cartContent.querySelector(`.third`)) {
+            else if(i==2) {
                 let removeIt = cartContent.querySelector(`.third`);
                 cartContent.removeChild(removeIt)
             }
