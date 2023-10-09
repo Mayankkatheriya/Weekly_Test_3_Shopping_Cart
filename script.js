@@ -83,8 +83,10 @@ for(let i=0; i<products.length; i++){
                 decrease.innerText = `${count[i].innerText} X 800`
             }
         }
-        amount -=parseInt(price[i].innerText);
-        totalAmount.innerText = `₹ ${amount}`
+        if(amount>0){
+            amount -=parseInt(price[i].innerText);
+            totalAmount.innerText = `₹ ${amount}`
+        }
     })
     addButton[i].addEventListener('click', function(){
         removeEle.style.display = "none"
