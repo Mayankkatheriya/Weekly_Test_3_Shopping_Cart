@@ -45,19 +45,25 @@ function createChild(pName, count, price, i){
 for(let i=0; i<products.length; i++){
     removeButton[i].addEventListener('click', function(){
         
-        if(count[i].innerText==0){
-            if(i==0){
+        if(count[i].innerText<=0){
+
+            //? check weather particular class element present or not
+
+            if(i==0 && cartContent.querySelector(`.first`)){
                 let removeIt = cartContent.querySelector(`.first`);
                 cartContent.removeChild(removeIt)
             }
-            else if(i==1){
+            else if(i==1 && cartContent.querySelector(`.second`)){
                 let removeIt = cartContent.querySelector(`.second`);
                 cartContent.removeChild(removeIt)
             }
-            else {
+            else if(i==2 && cartContent.querySelector(`.third`)) {
                 let removeIt = cartContent.querySelector(`.third`);
                 cartContent.removeChild(removeIt)
             }
+            
+            //* Check class is present or not?
+
             if(!cartContent.querySelector(`.product`)){
                 removeEle.style.display = "block"
                 total.style.visibility = "hidden"
